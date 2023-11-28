@@ -7,7 +7,7 @@ replicaCount: 1
 namespace: app
 
 image:
-  repository: git-action
+  repository: kjs8281/git-action
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
