@@ -7,14 +7,14 @@ replicaCount: 1
 namespace: app
 
 image:
-  repository: gitAction
+  repository: git-action
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latests"
+  tag: "latest"
 
 imagePullSecrets: []
-nameOverride: "gitAction"
-fullnameOverride: "gitAction"
+nameOverride: "git-action"
+fullnameOverride: "git-action"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -44,7 +44,7 @@ securityContext:
   # runAsUser: 1000
 
 service:
-  type: LoadBalancer
+  type: NodePort
   port: 31296
 
 ingress:
