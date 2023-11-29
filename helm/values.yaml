@@ -49,7 +49,7 @@ securityContext:
 
 service:
   type: NodePort
-  port: 31296
+  port: 7777
 
 ingress:
   enabled: false
