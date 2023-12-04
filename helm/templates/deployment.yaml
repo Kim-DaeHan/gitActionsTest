@@ -40,6 +40,9 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          env:
+            - name: MONGODB_URI
+              value: {{ .Values.nestjsApp.mongodbUri }}
           livenessProbe:
             httpGet:
               path: /

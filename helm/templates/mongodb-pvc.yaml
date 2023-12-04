@@ -1,0 +1,17 @@
+# 파일명: mongodb-pvc.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: { { include "helm.fullname" . } }
+  labels:
+    app: { { include "helm.name" . } }
+    chart: { { include "helm.chart" . } }
+    release: { { .Release.Name | quote } }
+    heritage: { { .Release.Service | quote } }
+spec:
+  accessModes:
+    - { { .Values.mongodb.persistence.accessMode } }
+  resources:
+    requests:
+      storage: { { .Values.mongodb.persistence.size } }
+  storageClassName: { { .Values.mongodb.persistence.storageClass | quote } }

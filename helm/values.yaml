@@ -49,6 +49,16 @@ service:
   type: NodePort
   port: 3000
 
+mongodb:
+  persistence:
+    enabled: true
+    storageClass: "standard" # 스토리지 클래스에 따라 변경
+    accessMode: "ReadWriteOnce"
+    size: "5Gi"
+
+nestjsApp:
+  mongodbUri: "mongodb://mongodb-svc:27017/your-database-name"
+
 ingress:
   enabled: false
   className: ""
