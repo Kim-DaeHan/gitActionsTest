@@ -57,7 +57,7 @@ mongodb:
     size: "5Gi"
 
 nestjsApp:
-  mongodbUri: "mongodb://mongodb-svc:27017/your-database-name"
+  mongodbUri: "mongodb://192.168.0.2:27017/Test"
 
 ingress:
   enabled: false

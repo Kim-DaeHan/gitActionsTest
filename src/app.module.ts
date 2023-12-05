@@ -1,11 +1,11 @@
-import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
-import { TestModule } from './test/test.module';
-import { UserModule } from './user/user.module';
+import { Module } from "@nestjs/common";
+import { MongooseModule } from "@nestjs/mongoose";
+import { TestModule } from "./test/test.module";
+import { UserModule } from "./user/user.module";
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://192.168.0.2:27017/Test'),
+    MongooseModule.forRoot(process.env.MONGODB_URI),
     TestModule,
     UserModule,
   ],
