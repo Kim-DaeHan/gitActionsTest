@@ -10,4 +10,10 @@ import { UserModule } from "./user/user.module";
     UserModule,
   ],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    const mongodbUri = process.env.MONGODB_URI;
+    console.log(`Connected to MongoDB at: ${mongodbUri}`);
+    // 여기에서 mongodbUri를 사용하여 MongoDB에 연결하는 로직을 구현할 수 있습니다.
+  }
+}
