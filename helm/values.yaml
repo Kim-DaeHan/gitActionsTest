@@ -45,13 +45,6 @@ service:
   type: NodePort
   port: 3000
 
-mongodb:
-  persistence:
-    enabled: true
-    storageClass: "standard" # 스토리지 클래스에 따라 변경
-    accessMode: "ReadWriteOnce"
-    size: "5Gi"
-
 nestjsApp:
   mongodbUri: "mongodb://ec2-3-36-92-95.ap-northeast-2.compute.amazonaws.com:27017"
 
