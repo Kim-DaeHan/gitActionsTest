@@ -5,10 +5,6 @@
 replicaCount: 1
 
 image:
-  # repository: nginx
-  # pullPolicy: IfNotPresent
-  # # Overrides the image tag whose default is the chart appVersion.
-  # tag: ""
   repository: kdh8281/git-action
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
@@ -57,7 +53,7 @@ mongodb:
     size: "5Gi"
 
 nestjsApp:
-  mongodbUri: "mongodb://192.168.0.2:27017/Test"
+  mongodbUri: "mongodb://ec2-3-36-92-95.ap-northeast-2.compute.amazonaws.com:27017"
 
 ingress:
   enabled: false
